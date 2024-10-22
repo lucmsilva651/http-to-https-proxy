@@ -1,8 +1,21 @@
 # http-to-https-proxy
 This is an "proxy" to convert non-SSL content to SSL (to avoid the "mixed content" error on Chromium).
 
+# Installation
+Host your own instance at Vercel, pick your link and use the structure at [Usage](#usage).
+
+Also, go to `api/proxy.js` and change the `allowedOrigins` to match with the domain you want to use with this API.
+
+An example below:
+```
+const allowedOrigins = [
+  /https?:\/\/(.*\.)?example\.com/,
+  /https?:\/\/(.*\.)?example\.live/,
+  /https?:\/\/(.*\.)?website\.live/
+];
+```
+
 # Usage
-Host your own instance at Vercel, pick your link and use this structure.
 ```
 https://proxy.example.com/api/proxy?path=www.non-ssl.com/non-ssl-img.png
 ```
