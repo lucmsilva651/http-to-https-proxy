@@ -26,18 +26,20 @@ const allowedOrigins = [
 ```
 
 # Usage
+This is an example link for an usage of the API:
 ```
 https://proxy.example.com/api/proxy?path=www.non-ssl.com/non-ssl-img.png
 ```
-- You will need to change the `proxy.example.com` to your real proxy domain address (like `ssl.lucmsilva.com`).
-- Also, you will need to change `www.non-ssl.com` and forward with the URL of the resource that you want to convert to HTTPS.
+
+- `https://proxy.example.com/api/proxy`: This is the path of the proxy. You will need to change the proxy domain to your real hosting domain address.
+- `?path=www.non-ssl.com/non-ssl-img.png`: This is the path to the non-SSL resource that you want to convert to HTTPS. Don't put `http://` on the path, as the API already does this.
 
 # Explaining API errors
 My request returns an error with the content `COPE HARD`. What should I do?
-- This is an 403 Forbidden error. 99% chance you forgot to put your website into `allowedOrigins`.
+- This is an `403 Forbidden` error. 99% chance you forgot to put your domain into `allowedOrigins`.
 
 My requests to the API are just returning `F`. Why?
-- This is any other error than a 403. Try to see what is really wrong on `Chromium DevTools > Network` and see what is going wrong. More possibly an `ERR_BLOCKED_BY_ORB` error.
+- This is any other error than a `403`. Try to see what is really wrong on `Chromium DevTools > Network` and see what is going wrong. More possibly an `ERR_BLOCKED_BY_ORB` error.
 
 When I do something with the API, it returns a error with the content `bRUH moment`. Why? Am I dumb?
 - Yes. You are running on an allowed domain, but you forgot to put your non-SSL content at `?path`, try that and see if it works.
