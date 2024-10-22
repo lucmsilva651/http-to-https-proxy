@@ -8,14 +8,18 @@ export default async function handler(req, res) {
   }
 
   const httpUrl = `http://${path}`;
+  
   try {
     const response = await fetch(httpUrl);
-    const contentType = response.headers.get('content-type');
 
+    if (!response.ok) {
+      return res.status(response.status).json({ error: 'Error fetching resource' });
+    }
+
+    const contentType = response.headers.get('content-type');
     res.setHeader('Content-Type', contentType);
     res.status(response.status);
-
-    // Pipe the response to the client
+    
     response.body.pipe(res);
   } catch (error) {
     console.error('Fetch error:', error);
