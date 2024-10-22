@@ -15,6 +15,16 @@ const allowedOrigins = [
 ];
 ```
 
+If you don't want to include all subdomains, you can put their manually or just include the root domain to only allow itself.
+
+Another example:
+```
+const allowedOrigins = [
+  https://subdomain.example.com/,
+  https://example.live/
+];
+```
+
 # Usage
 ```
 https://proxy.example.com/api/proxy?path=www.non-ssl.com/non-ssl-img.png
