@@ -1,6 +1,7 @@
 {
   "name": "http-to-https-proxy",
   "version": "1.0.0",
+  "main": "proxy.js",
   "type": "module",
   "dependencies": {
     "node-fetch": "^3.0.0"
