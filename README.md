@@ -1,4 +1,6 @@
 # http-to-https-proxy
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Flucmsilva651%2Fhttp-to-https-proxy.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Flucmsilva651%2Fhttp-to-https-proxy?ref=badge_shield)
+
 This is an "proxy" to convert non-SSL content to SSL (to avoid the "mixed content" error on Chromium).
 
 # Installation
@@ -56,3 +58,6 @@ When I do something with the API, it returns a error with the content `bRUH mome
 
 # License 
 BSD-3-Clause - 2024 Lucas Gabriel (lucmsilva)
+
+
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Flucmsilva651%2Fhttp-to-https-proxy.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Flucmsilva651%2Fhttp-to-https-proxy?ref=badge_large)
