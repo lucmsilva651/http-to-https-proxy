@@ -4,7 +4,7 @@ This is an "proxy" to convert non-SSL content to SSL (to avoid the "mixed conten
 # Installation
 Host your own instance at Vercel, pick your link and use the structure at [Usage](#usage).
 
-Also, go to `api/proxy.js` and change the `allowedOrigins` to match with the domain you want to use with this API.
+Also, go to `api/proxy.js` and change the `allowedOrigins` and `allowedPaths` to match with your domains and what you want to retrieve with this API.
 
 An example below:
 ```
@@ -13,6 +13,10 @@ const allowedOrigins = [
   /https?:\/\/(.*\.)?example\.live/,
   /https?:\/\/(.*\.)?website\.live/
 ];
+
+const allowedPaths = [
+  /http?:\/\/(.*\.)?non-ssl\.com/,
+];
 ```
 
 If you don't want to include all subdomains, you can put their manually or just include the root domain to only allow itself.
@@ -20,8 +24,13 @@ If you don't want to include all subdomains, you can put their manually or just 
 Another example:
 ```
 const allowedOrigins = [
-  https://subdomain.example.com/,
-  https://example.live/
+  https://example.com/,
+  https://example.live/,
+  https://www.website.live/
+];
+
+const allowedPaths = [
+  http://www.non-ssl.com/,
 ];
 ```
 
