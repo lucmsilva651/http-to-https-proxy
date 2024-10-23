@@ -15,7 +15,8 @@ const allowedOrigins = [
 ];
 
 const allowedPaths = [
-  /http?:\/\/(.*\.)?non-ssl\.com/,
+  http?:\/\/(.*\.)?non-ssl\.com/,
+  http://non-ssl.com/non-ssl-img.png,
 ];
 ```
 
@@ -30,7 +31,7 @@ const allowedOrigins = [
 ];
 
 const allowedPaths = [
-  http://www.non-ssl.com/,
+  http://www.non-ssl.com/non-ssl-img.png,
 ];
 ```
 
